@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>見積依頼フォーム</title>
+</head>
+<body>
+    <h1>見積依頼フォーム</h1>
+    <form action="/form" method="post">
+        <label for="name">名前:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">メールアドレス:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">電話番号:</label><br>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <label for="details">お問い合わせ内容詳細:</label><br>
+        <textarea id="details" name="details" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="送信">
+    </form>
+</body>
+</html>
